@@ -1,0 +1,39 @@
+Windows Service:
+
+	1. Create Service
+	- https://docs.microsoft.com/en-us/dotnet/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer#BK_CreateProject
+	- https://www.codeproject.com/Tips/855152/Windows-Self-installing-Named-Services
+
+	- To install service navigate to .\XMProService\XMProService\bin\Debug and type XMProService.exe -i
+	- To uninstall the service navigate to .\XMProService\XMProService\bin\Debug and type XMProService.exe -u
+
+	2. Create Database 
+	- enable broker
+	- Query Notifications
+	- https://stackoverflow.com/questions/5288434/how-to-monitor-sql-server-table-changes-by-using-c
+	- https://docs.microsoft.com/en-us/sql/relational-databases/native-client/features/working-with-query-notifications
+	- https://dzone.com/articles/receive-notifications-with-new-values-when-table-r
+
+	
+Mobile App
+
+	1. Splash Screen
+	- https://xamarinhelp.com/creating-splash-screen-xamarin-forms/
+
+Database:
+
+	1. No references
+	- Could have done more on this like creating a user table, creating more routes.
+
+ODATA/Web API
+	- https://www.asp.net/web-api/overview/odata-support-in-aspnet-web-api
+	- https://docs.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications
+
+Xamarin App
+	- https://components.xamarin.com/view/simple.odata.client
+	- https://blog.xamarin.com/turn-events-into-commands-with-behaviors/
+
+The OData endpoints for Xamarin work but the forms show up before the data returns, so I decided to go with the HttpClient expierence for the demo.
+- Look in the Service/DataService.cs file for working examples of OData with Xamarin.
+
+When developing Mobile apps it is easiest to use a real device. I used an Android device for developement and then tested on Apple.

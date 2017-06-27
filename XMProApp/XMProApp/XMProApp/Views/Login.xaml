@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XMProApp.Views.Login"
+             Title="{Binding Title}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Entry">
+                    <Setter Property="Margin" Value="40,10" />
+                </Style>
+            </ResourceDictionary>
+        </Grid.Resources>
+        <BoxView Grid.Row="0" HeightRequest="1" WidthRequest="1" BackgroundColor="Black"/>
+        <StackLayout Grid.Row="2" VerticalOptions="FillAndExpand">
+            <Image Source="XMProLogo.png" />
+        </StackLayout>
+        <StackLayout Grid.Row="3" VerticalOptions="FillAndExpand">
+            <Entry Text="{Binding UserName}" Placeholder="Enter your username" VerticalOptions="EndAndExpand" />
+            <Entry Text="{Binding Password}" IsPassword="true" Placeholder="Enter your password" VerticalOptions="StartAndExpand" />
+            <Button Text="Submit" Command="{Binding LoginCommand}" />
+        </StackLayout>
+    </Grid>
+    <!--<ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />-->
+</ContentPage>

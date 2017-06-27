@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="XPostModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DeliveryServiceRoute">
+    <Key>
+      <PropertyRef Name="DeliveryServiceRouteID" />
+    </Key>
+    <Property Name="DeliveryServiceRouteID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DeliveryServiceID" Type="Int32" Nullable="false" />
+    <Property Name="GeoFence" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DeliveryService" Relationship="Self.FK__DeliveryS__Deliv__267ABA7A" FromRole="DeliveryServiceRoutes" ToRole="DeliveryServices" />
+    <NavigationProperty Name="ParcelDeliveries" Relationship="Self.FK__ParcelDel__Deliv__30F848ED" FromRole="DeliveryServiceRoutes" ToRole="ParcelDeliveries" />
+  </EntityType>
+  <EntityType Name="DeliveryService">
+    <Key>
+      <PropertyRef Name="DeliveryServiceID" />
+    </Key>
+    <Property Name="DeliveryServiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DeliveryServiceRoutes" Relationship="Self.FK__DeliveryS__Deliv__267ABA7A" FromRole="DeliveryServices" ToRole="DeliveryServiceRoutes" />
+  </EntityType>
+  <EntityType Name="ParcelDelivery">
+    <Key>
+      <PropertyRef Name="ParcelDeliveryID" />
+    </Key>
+    <Property Name="ParcelDeliveryID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParcelID" Type="Int64" Nullable="false" />
+    <Property Name="DeliveryServiceRouteID" Type="Int64" Nullable="false" />
+    <Property Name="RouteInstructions" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ParcelDeliverySort" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DeliveryServiceRoute" Relationship="Self.FK__ParcelDel__Deliv__30F848ED" FromRole="ParcelDeliveries" ToRole="DeliveryServiceRoutes" />
+    <NavigationProperty Name="Parcel" Relationship="Self.FK__ParcelDel__Parce__22AA2996" FromRole="ParcelDeliveries" ToRole="Parcels" />
+  </EntityType>
+  <EntityType Name="Parcel">
+    <Key>
+      <PropertyRef Name="ParcelID" />
+    </Key>
+    <Property Name="ParcelID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DropOffStoreID" Type="Int64" />
+    <Property Name="DestinationAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DestinationCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DestinationST" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="DestinationZip" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DeliveryDate" Type="DateTime" Precision="3" />
+    <Property Name="InsuranceWorth" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Height" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Width" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Length" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Weight" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="ParcelDeliveries" Relationship="Self.FK__ParcelDel__Parce__22AA2996" FromRole="Parcels" ToRole="ParcelDeliveries" />
+    <NavigationProperty Name="Store" Relationship="Self.FK__Parcels__DropOff__1FCDBCEB" FromRole="Parcels" ToRole="Stores" />
+  </EntityType>
+  <EntityType Name="Store">
+    <Key>
+      <PropertyRef Name="StoreID" />
+    </Key>
+    <Property Name="StoreID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ST" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Zip" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" />
+    <NavigationProperty Name="Parcels" Relationship="Self.FK__Parcels__DropOff__1FCDBCEB" FromRole="Stores" ToRole="Parcels" />
+    <NavigationProperty Name="StoreType" Relationship="Self.FK__Stores__Type__1B0907CE" FromRole="Stores" ToRole="StoreTypes" />
+  </EntityType>
+  <EntityType Name="StoreType">
+    <Key>
+      <PropertyRef Name="StoreTypeID" />
+    </Key>
+    <Property Name="StoreTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Stores" Relationship="Self.FK__Stores__Type__1B0907CE" FromRole="StoreTypes" ToRole="Stores" />
+  </EntityType>
+  <Association Name="FK__DeliveryS__Deliv__267ABA7A">
+    <End Role="DeliveryServices" Type="Self.DeliveryService" Multiplicity="1" />
+    <End Role="DeliveryServiceRoutes" Type="Self.DeliveryServiceRoute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeliveryServices">
+        <PropertyRef Name="DeliveryServiceID" />
+      </Principal>
+      <Dependent Role="DeliveryServiceRoutes">
+        <PropertyRef Name="DeliveryServiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ParcelDel__Deliv__30F848ED">
+    <End Role="DeliveryServiceRoutes" Type="Self.DeliveryServiceRoute" Multiplicity="1" />
+    <End Role="ParcelDeliveries" Type="Self.ParcelDelivery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeliveryServiceRoutes">
+        <PropertyRef Name="DeliveryServiceRouteID" />
+      </Principal>
+      <Dependent Role="ParcelDeliveries">
+        <PropertyRef Name="DeliveryServiceRouteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ParcelDel__Parce__22AA2996">
+    <End Role="Parcels" Type="Self.Parcel" Multiplicity="1" />
+    <End Role="ParcelDeliveries" Type="Self.ParcelDelivery" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Parcels">
+        <PropertyRef Name="ParcelID" />
+      </Principal>
+      <Dependent Role="ParcelDeliveries">
+        <PropertyRef Name="ParcelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Parcels__DropOff__1FCDBCEB">
+    <End Role="Stores" Type="Self.Store" Multiplicity="0..1" />
+    <End Role="Parcels" Type="Self.Parcel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="Parcels">
+        <PropertyRef Name="DropOffStoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Stores__Type__1B0907CE">
+    <End Role="StoreTypes" Type="Self.StoreType" Multiplicity="0..1" />
+    <End Role="Stores" Type="Self.Store" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StoreTypes">
+        <PropertyRef Name="StoreTypeID" />
+      </Principal>
+      <Dependent Role="Stores">
+        <PropertyRef Name="Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DeliveryServiceRoutes" EntityType="Self.DeliveryServiceRoute" />
+    <EntitySet Name="DeliveryServices" EntityType="Self.DeliveryService" />
+    <EntitySet Name="ParcelDeliveries" EntityType="Self.ParcelDelivery" />
+    <EntitySet Name="Parcels" EntityType="Self.Parcel" />
+    <EntitySet Name="Stores" EntityType="Self.Store" />
+    <EntitySet Name="StoreTypes" EntityType="Self.StoreType" />
+    <AssociationSet Name="FK__DeliveryS__Deliv__267ABA7A" Association="Self.FK__DeliveryS__Deliv__267ABA7A">
+      <End Role="DeliveryServices" EntitySet="DeliveryServices" />
+      <End Role="DeliveryServiceRoutes" EntitySet="DeliveryServiceRoutes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ParcelDel__Deliv__30F848ED" Association="Self.FK__ParcelDel__Deliv__30F848ED">
+      <End Role="DeliveryServiceRoutes" EntitySet="DeliveryServiceRoutes" />
+      <End Role="ParcelDeliveries" EntitySet="ParcelDeliveries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ParcelDel__Parce__22AA2996" Association="Self.FK__ParcelDel__Parce__22AA2996">
+      <End Role="Parcels" EntitySet="Parcels" />
+      <End Role="ParcelDeliveries" EntitySet="ParcelDeliveries" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Parcels__DropOff__1FCDBCEB" Association="Self.FK__Parcels__DropOff__1FCDBCEB">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="Parcels" EntitySet="Parcels" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Stores__Type__1B0907CE" Association="Self.FK__Stores__Type__1B0907CE">
+      <End Role="StoreTypes" EntitySet="StoreTypes" />
+      <End Role="Stores" EntitySet="Stores" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

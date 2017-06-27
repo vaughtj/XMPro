@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="XPostModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="DeliveryServiceRoutes">
+      <EntityTypeMapping TypeName="XPostModel.DeliveryServiceRoute">
+        <MappingFragment StoreEntitySet="DeliveryServiceRoutes">
+          <ScalarProperty Name="DeliveryServiceRouteID" ColumnName="DeliveryServiceRouteID" />
+          <ScalarProperty Name="DeliveryServiceID" ColumnName="DeliveryServiceID" />
+          <ScalarProperty Name="GeoFence" ColumnName="GeoFence" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeliveryServices">
+      <EntityTypeMapping TypeName="XPostModel.DeliveryService">
+        <MappingFragment StoreEntitySet="DeliveryServices">
+          <ScalarProperty Name="DeliveryServiceID" ColumnName="DeliveryServiceID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParcelDeliveries">
+      <EntityTypeMapping TypeName="XPostModel.ParcelDelivery">
+        <MappingFragment StoreEntitySet="ParcelDeliveries">
+          <ScalarProperty Name="ParcelDeliveryID" ColumnName="ParcelDeliveryID" />
+          <ScalarProperty Name="ParcelID" ColumnName="ParcelID" />
+          <ScalarProperty Name="DeliveryServiceRouteID" ColumnName="DeliveryServiceRouteID" />
+          <ScalarProperty Name="RouteInstructions" ColumnName="RouteInstructions" />
+          <ScalarProperty Name="ParcelDeliverySort" ColumnName="ParcelDeliverySort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parcels">
+      <EntityTypeMapping TypeName="XPostModel.Parcel">
+        <MappingFragment StoreEntitySet="Parcels">
+          <ScalarProperty Name="ParcelID" ColumnName="ParcelID" />
+          <ScalarProperty Name="DropOffStoreID" ColumnName="DropOffStoreID" />
+          <ScalarProperty Name="DestinationAddress" ColumnName="DestinationAddress" />
+          <ScalarProperty Name="DestinationCity" ColumnName="DestinationCity" />
+          <ScalarProperty Name="DestinationST" ColumnName="DestinationST" />
+          <ScalarProperty Name="DestinationZip" ColumnName="DestinationZip" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="InsuranceWorth" ColumnName="InsuranceWorth" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stores">
+      <EntityTypeMapping TypeName="XPostModel.Store">
+        <MappingFragment StoreEntitySet="Stores">
+          <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ST" ColumnName="ST" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StoreTypes">
+      <EntityTypeMapping TypeName="XPostModel.StoreType">
+        <MappingFragment StoreEntitySet="StoreTypes">
+          <ScalarProperty Name="StoreTypeID" ColumnName="StoreTypeID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

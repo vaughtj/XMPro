@@ -1,0 +1,2 @@
+Insert {"ReadingID":12,"Temperature":0.0789791,"Pressure":0.391883,"Luminosity":0.493055,"Timestamp":new Date(1498320938040)}
+Delete {"ReadingID":12,"Temperature":0.0789791,"Pressure":0.391883,"Luminosity":0.493055,"Timestamp":new Date(1498320938040)}

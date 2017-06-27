@@ -1,0 +1,9 @@
+C:\Development\Test Projects\XMPro Test\XMProService\XMProService\bin\Debug\XMProService.exe.config
+C:\Development\Test Projects\XMPro Test\XMProService\XMProService\bin\Debug\XMProService.exe
+C:\Development\Test Projects\XMPro Test\XMProService\XMProService\bin\Debug\XMProService.pdb
+C:\Development\Test Projects\XMPro Test\XMProService\XMProService\bin\Debug\Newtonsoft.Json.dll
+C:\Development\Test Projects\XMPro Test\XMProService\XMProService\bin\Debug\TableDependency.dll
+C:\Development\Test Projects\XMPro Test\XMProService\XMProService\bin\Debug\TableDependency.SqlClient.dll
+C:\Development\Test Projects\XMPro Test\XMProService\XMProService\bin\Debug\Newtonsoft.Json.xml
+C:\Development\Test Projects\XMPro Test\XMProService\XMProService\obj\Debug\XMProService.exe
+C:\Development\Test Projects\XMPro Test\XMProService\XMProService\obj\Debug\XMProService.pdb

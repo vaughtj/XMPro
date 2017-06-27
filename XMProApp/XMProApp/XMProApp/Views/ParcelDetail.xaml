@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XMProApp.Views.ParcelDetail"
+             Title="{Binding Title}">
+    <StackLayout Margin="10,10,0,0">
+        <Label Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding MyParcel.CustomerName}" FontSize="18" TextColor="#58666e" FontAttributes="Bold" Margin="5,0,0,0" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <ScrollView Grid.Row="0">
+                <StackLayout>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="7*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="Store ID: " FontSize="14" TextColor="#58666e" />
+                        <Label Grid.Column="1" Text="{Binding MyParcel.DropOffStoreID}" FontSize="14" TextColor="#98a6ad"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="7*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="Delivery Date: " FontSize="14" TextColor="#58666e" />
+                        <Label Grid.Column="1" Text="{Binding MyParcel.DeliveryDate, StringFormat='{0:MM/dd/yyyy}'}" FontSize="14" TextColor="#98a6ad"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="7*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="Address: " FontSize="14" TextColor="#58666e" />
+                        <Entry Grid.Column="1" Text="{Binding MyParcel.DestinationAddress}" />
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="7*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="City: " FontSize="14" TextColor="#58666e" />
+                        <Entry Grid.Column="1" Text="{Binding MyParcel.DestinationCity}"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="7*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="State: " FontSize="14" TextColor="#58666e" />
+                        <Entry Grid.Column="1" Text="{Binding MyParcel.DestinationST}" />
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="7*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="Zip: " FontSize="14" TextColor="#58666e" />
+                        <Entry Grid.Column="1" Text="{Binding MyParcel.DestinationZip}" />
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="7*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="Insurance: " FontSize="14" TextColor="#58666e" />
+                        <Label Grid.Column="1" Text="{Binding MyParcel.InsuranceWorth}" FontSize="14" TextColor="#98a6ad" Margin="3, 0, 0, 0" />
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="7*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="Dimentions: " FontSize="14" TextColor="#58666e" />
+                        <StackLayout Grid.Column="1" Orientation="Horizontal">
+                            <Label Text="{Binding MyParcel.Height}" FontSize="14" TextColor="#98a6ad" Margin="3, 0, 0, 0" />
+                            <Label Text="H" FontSize="14" TextColor="#98a6ad" Margin="1, 0, 0, 0" />
+                            <Label Text="{Binding MyParcel.Width}" FontSize="14" TextColor="#98a6ad"  Margin="3, 0, 0, 0" />
+                            <Label Text="W" FontSize="14" TextColor="#98a6ad" Margin="1, 0, 0, 0" />
+                            <Label Text="{Binding MyParcel.Length}" FontSize="14" TextColor="#98a6ad"  Margin="3, 0, 0, 0" />
+                            <Label Text="L" FontSize="14" TextColor="#98a6ad" Margin="1, 0, 0, 0" />
+                        </StackLayout>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="7*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Text="Weight: " FontSize="14" TextColor="#58666e" />
+                        <Label Grid.Column="1" Text="{Binding MyParcel.Weight}" FontSize="14" TextColor="#98a6ad" Margin="3, 0, 0, 0" />
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+            <StackLayout Grid.Row="1">
+                <Button HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  Command="{Binding SaveCommand}" Text="Update"></Button>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

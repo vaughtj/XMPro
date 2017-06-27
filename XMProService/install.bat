@@ -1,0 +1,1 @@
+installutil.exe "XMProService\bin\Debug\XMProService.exe"
