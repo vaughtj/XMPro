@@ -32,6 +32,7 @@ namespace XMProApp.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App(new AndroidInitializer()));
         }
+
     }
 
     public class AndroidInitializer : IPlatformInitializer

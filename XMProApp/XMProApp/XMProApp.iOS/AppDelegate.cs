@@ -6,6 +6,9 @@ using Foundation;
 using UIKit;
 using Ninject;
 using Prism.Ninject;
+using Syncfusion.ListView.XForms.iOS;
+using Syncfusion.SfPullToRefresh.XForms.iOS;
+using Syncfusion.SfBusyIndicator.XForms.iOS;
 
 namespace XMProApp.iOS
 {
@@ -24,11 +27,17 @@ namespace XMProApp.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+
             global::Xamarin.Forms.Forms.Init();
+            new SfBusyIndicatorRenderer();
+            SfListViewRenderer.Init();
+            SfPullToRefreshRenderer.Init();
             LoadApplication(new App(new iOSInitializer()));
 
             return base.FinishedLaunching(app, options);
         }
+
+
     }
 
     public class iOSInitializer : IPlatformInitializer

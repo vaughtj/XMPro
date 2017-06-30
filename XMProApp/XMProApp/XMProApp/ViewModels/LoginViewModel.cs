@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using XMProApp.Models;
 using XMProApp.Service;
 
@@ -35,7 +36,7 @@ namespace XMProApp.ViewModels
         public LoginViewModel(INavigationService navigationService, IPageDialogService pageDialogService) : base(navigationService)
         {
             _pageDialogService = pageDialogService;
-
+            IsBusy = false;
             Title = "Login";
 
             LoginCommand = new DelegateCommand(OnLoginCommandExecuted, LoginCommandCanExecute)
@@ -48,9 +49,11 @@ namespace XMProApp.ViewModels
         private async void OnLoginCommandExecuted()
         {
             IsBusy = true;
+
+            //await Task.Delay(500);
             if (UserName == Password)
             {
-                await _navigationService.NavigateAsync("/Navigation/Parcel");
+                await _navigationService.NavigateAsync("/Navigation/Parcel");                
             }
             else
             {

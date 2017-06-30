@@ -17,12 +17,28 @@ namespace XMProApp.Views {
     public partial class Parcel : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.ListView listViewParcels;
+        private global::Syncfusion.SfPullToRefresh.XForms.SfPullToRefresh pullToRefresh;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator busyindicator;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Syncfusion.ListView.XForms.SfListView listView;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.DataTemplate RightSwipeTemplate;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.DataTemplate LeftSwipeTemplate;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(Parcel));
-            listViewParcels = this.FindByName<global::Xamarin.Forms.ListView>("listViewParcels");
+            pullToRefresh = this.FindByName<global::Syncfusion.SfPullToRefresh.XForms.SfPullToRefresh>("pullToRefresh");
+            busyindicator = this.FindByName<global::Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator>("busyindicator");
+            listView = this.FindByName<global::Syncfusion.ListView.XForms.SfListView>("listView");
+            RightSwipeTemplate = this.FindByName<global::Xamarin.Forms.DataTemplate>("RightSwipeTemplate");
+            LeftSwipeTemplate = this.FindByName<global::Xamarin.Forms.DataTemplate>("LeftSwipeTemplate");
         }
     }
 }

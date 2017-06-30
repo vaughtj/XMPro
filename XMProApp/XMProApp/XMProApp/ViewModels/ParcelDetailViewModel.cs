@@ -5,6 +5,7 @@ using Prism.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using XMProApp.Models;
 using XMProApp.Repository;
 
@@ -72,13 +73,20 @@ namespace XMProApp.ViewModels
 
         public override async void OnNavigatedTo(NavigationParameters parameters)
         {
+            
             if (parameters.ContainsKey("Id"))
             {
-                int Id = Convert.ToInt32(parameters["Id"]);
+                IsBusy = true;
+                await Task.Run(async () => {
+                    int Id = Convert.ToInt32(parameters["Id"]);
 
-                var result = await _parcelRepository.GetItemAsync(Id);
-                MyParcel = (Parcels)result;
-                shouldSave = false;
+                    var result = await _parcelRepository.GetItemAsync(Id);
+                    MyParcel = (Parcels)result;
+                    shouldSave = false;
+                });
+                IsBusy = false;
+
+
             }
             else
             {

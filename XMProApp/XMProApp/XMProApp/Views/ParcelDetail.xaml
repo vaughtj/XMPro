@@ -4,6 +4,7 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="XMProApp.Views.ParcelDetail"
+             xmlns:syncfusionBI="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              Title="{Binding Title}">
     <StackLayout Margin="10,10,0,0">
         <Label Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding MyParcel.CustomerName}" FontSize="18" TextColor="#58666e" FontAttributes="Bold" Margin="5,0,0,0" />
@@ -12,6 +13,8 @@
                 <RowDefinition Height="8*" />
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
+            <!--Busy Indicator-->
+            <syncfusionBI:SfBusyIndicator Grid.Row="0" x:Name="busyindicator" Title="Loading.." IsBusy="{Binding IsBusy}"  ViewBoxHeight="150" ViewBoxWidth="150" TextColor="Blue"  AnimationType="Ball"/>
             <ScrollView Grid.Row="0">
                 <StackLayout>
                     <Grid>

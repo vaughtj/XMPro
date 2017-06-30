@@ -13,12 +13,49 @@ using Xamarin.Forms;
 using XMProApp.Models;
 using XMProApp.Repository;
 using XMProApp.Service;
+using Syncfusion.ListView.XForms;
+using Syncfusion.DataSource;
 
 namespace XMProApp.ViewModels
 {
     public class ParcelViewModel : BaseViewModel
     {
-        public ICommand AddCommand => new Command<Parcels>(async (item) => await GoToDetail(item));
+        #region Command Fields
+
+        Command<Syncfusion.ListView.XForms.ItemTappedEventArgs> tapCommand;
+        Command<Parcels> swipeImageCommand;
+        Command<SfListView> loadedCommand;
+        Command<SwipingEventArgs> swipeCommand;
+
+        #endregion
+
+        #region Command Properties
+
+        public Command<Syncfusion.ListView.XForms.ItemTappedEventArgs> TapCommand
+        {
+            get { return tapCommand; }
+            protected set { tapCommand = value; }
+        }
+
+        public Command<SfListView> LoadedCommand
+        {
+            get { return loadedCommand; }
+            protected set { loadedCommand = value; }
+        }
+
+        public Command<Parcels> SwipeImageCommand
+        {
+            get { return swipeImageCommand; }
+            protected set { swipeImageCommand = value; }
+        }
+
+        public Command<SwipingEventArgs> SwipeCommand
+        {
+            get { return swipeCommand; }
+            protected set { swipeCommand = value; }
+        }
+
+        #endregion
 
         protected IParcelRepository _parcelRepository { get; }
         IPageDialogService _pageDialogueService { get; }
@@ -39,22 +76,64 @@ namespace XMProApp.ViewModels
             _navigateService = navigationService;
 
             Title = "Parcels";
-        }
 
-        private async Task<bool> GoToDetail(Parcels item)
-        {
-            await _navigationService.NavigateAsync("ParcelDetail?Id=" + item.ParcelID);
 
-            return true;
+
+            tapCommand = new Command<Syncfusion.ListView.XForms.ItemTappedEventArgs>(OnTapped);
+            loadedCommand = new Command<SfListView>(OnListViewLoaded);
+            swipeImageCommand = new Command<Parcels>(OnSwipeImageTapped);
+            swipeCommand = new Command<SwipingEventArgs>(OnSwipeCommand);
+
         }
 
         public override async void OnNavigatedTo(NavigationParameters parameters)
         {
             IsBusy = true;
-            var result = await _parcelRepository.GetItemsAsync();
-            MyParcels = new ObservableCollection<Parcels>(result);
+
+            await Task.Run(async () => {
+                var result = await _parcelRepository.GetItemsAsync();
+                MyParcels = new ObservableCollection<Parcels>(result);
+            });
+            
             IsBusy = false;
         }
+
+        #region Command Events
+
+        public void OnListViewLoaded(SfListView listView)
+        {
+            if (listView.DataSource.GroupDescriptors.Count > 0)
+                return;
+
+            listView.DataSource.GroupDescriptors.Add(new GroupDescriptor()
+            {
+                PropertyName = "CustomerName",
+                KeySelector = (object obj1) =>
+                {
+                    var item = (obj1 as Parcels);
+                    return item.CustomerName[0].ToString();
+                },
+            });
+        }
+
+        public void OnTapped(Syncfusion.ListView.XForms.ItemTappedEventArgs eventArgs)
+        {
+            var id = (eventArgs.ItemData as Parcels).ParcelID;
+            _navigationService.NavigateAsync("ParcelDetail?Id=" + id);
+        }
+
+        public void OnSwipeCommand(SwipingEventArgs eventArgs)
+        {
+            if (eventArgs.SwipeOffSet >= 150)
+                eventArgs.Handled = true;
+        }
+
+        public async void OnSwipeImageTapped(Parcels parcels)
+        {
+            await _pageDialogueService.DisplayAlertAsync("Sorry!!!", "Delete functionallity currently not enabled.", "OK");
+        }
+
+        #endregion
     }
 
 }

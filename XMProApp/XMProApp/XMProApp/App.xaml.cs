@@ -14,7 +14,8 @@ namespace XMProApp
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("Navigation/Login");
+            NavigationService.NavigateAsync("Login");
+            //NavigationService.NavigateAsync("Navigation/Parcel");
         }
 
         protected override void RegisterTypes()
