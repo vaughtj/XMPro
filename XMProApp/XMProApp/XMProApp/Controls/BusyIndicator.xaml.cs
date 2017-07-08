@@ -12,19 +12,19 @@ namespace XMProApp.Controls
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BusyIndicator : Grid
     {
-        public static readonly BindableProperty boolProperty = BindableProperty.Create(nameof(ImBusy), typeof(bool), typeof(BusyIndicator), false, BindingMode.TwoWay, null, null);
+        //public static readonly BindableProperty boolProperty = BindableProperty.Create(nameof(ImBusy), typeof(bool), typeof(BusyIndicator), false, BindingMode.TwoWay, null, null);
 
-        public bool ImBusy
-        {
-            get
-            {
-                return (bool)GetValue(boolProperty);
-            }
-            set
-            {
-                SetValue(boolProperty, value);
-            }
-        }
+        //public bool ImBusy
+        //{
+        //    get
+        //    {
+        //        return (bool)GetValue(boolProperty);
+        //    }
+        //    set
+        //    {
+        //        SetValue(boolProperty, value);
+        //    }
+        //}
 
         public static readonly BindableProperty TextProperty = BindableProperty.Create(nameof(Text), typeof(string), typeof(BusyIndicator));
 

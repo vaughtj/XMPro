@@ -38,7 +38,7 @@ namespace XMProApp.ViewModels
             }
         }
 
-        public ParcelDetailViewModel(INavigationService navigationService, IPageDialogService pageDialogService, IParcelRepository parcelRepository) : base(navigationService)
+        public ParcelDetailViewModel(INavigationService navigationService, IPageDialogService pageDialogService, IParcelRepository parcelRepository) : base(navigationService, pageDialogService)
         {
             _parcelRepository = parcelRepository;
             _pageDialogService = pageDialogService;

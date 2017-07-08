@@ -106,6 +106,8 @@ class MonoPackageManager_Resources {
 		"Microsoft.OData.Edm.dll",
 		"Microsoft.Spatial.dll",
 		"Ninject.dll",
+		"Plugin.Connectivity.Abstractions.dll",
+		"Plugin.Connectivity.dll",
 		"Prism.dll",
 		"Prism.Forms.dll",
 		"Prism.Ninject.Forms.dll",

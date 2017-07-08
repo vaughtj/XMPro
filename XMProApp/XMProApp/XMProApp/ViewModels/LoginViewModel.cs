@@ -1,4 +1,6 @@
 ﻿using Newtonsoft.Json;
+using Plugin.Connectivity;
+using Plugin.Connectivity.Abstractions;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
@@ -16,7 +18,7 @@ namespace XMProApp.ViewModels
 {
     public class LoginViewModel : BaseViewModel
     {
-        IPageDialogService _pageDialogService { get;  }
+        IPageDialogService _pageDialogService { get; set; }
         public DelegateCommand LoginCommand { get;  }
 
         private string _userName;
@@ -33,7 +35,7 @@ namespace XMProApp.ViewModels
             set { SetProperty(ref _password, value); }
         }
 
-        public LoginViewModel(INavigationService navigationService, IPageDialogService pageDialogService) : base(navigationService)
+        public LoginViewModel(INavigationService navigationService, IPageDialogService pageDialogService) : base(navigationService, pageDialogService)
         {
             _pageDialogService = pageDialogService;
             IsBusy = false;
@@ -42,22 +44,30 @@ namespace XMProApp.ViewModels
             LoginCommand = new DelegateCommand(OnLoginCommandExecuted, LoginCommandCanExecute)
                .ObservesProperty(() => UserName)
                .ObservesProperty(() => Password);
+
+            
+
         }
-
-
 
         private async void OnLoginCommandExecuted()
         {
             IsBusy = true;
-
-            //await Task.Delay(500);
-            if (UserName == Password)
+            if (CrossConnectivity.Current.IsConnected)
             {
-                await _navigationService.NavigateAsync("/Navigation/Parcel");                
+                //await Task.Delay(500);
+                if (UserName == Password)
+                {
+                    await _navigationService.NavigateAsync("/Navigation/Parcel");
+                }
+                else
+                {
+                    await _pageDialogService.DisplayAlertAsync("Invalid Password", "Password and User Name must match.", "OK");
+                }
             }
             else
             {
-                await _pageDialogService.DisplayAlertAsync("Invalid Password", "Password and User Name must match.", "OK");
+                IsBusy = false;
+                await _pageDialogService.DisplayAlertAsync("No Network Connection", "You are currently not connected to a network. Please look at your network connections.", "OK");
             }
             IsBusy = false;
         }

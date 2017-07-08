@@ -4,7 +4,7 @@
                 xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
                 prism:ViewModelLocator.AutowireViewModel="True"        
                 xmlns:local="clr-namespace:XMProApp.Behaviors;assembly=XMProApp"
-                xmlns:local2="clr-namespace:XMProApp.Converters;assembly=XMProApp"
+                xmlns:cvtr="clr-namespace:XMProApp.Converters;assembly=XMProApp"
                 xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
                 xmlns:dataSource="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable"
                 xmlns:syncfusion="clr-namespace:Syncfusion.SfPullToRefresh.XForms;assembly=Syncfusion.SfPullToRefresh.XForms"
@@ -14,8 +14,8 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <local2:CustomConverter x:Key="EventArgs" />
-            <local2:NegateBooleanConverter x:Key="inverter"/>
+            <cvtr:sfEventArgsConverter x:Key="EventArgs" />
+            <cvtr:NegateBooleanConverter x:Key="inverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
@@ -144,11 +144,11 @@
                             </DataTemplate>
                         </listView:SfListView.ItemTemplate>
                         <listView:SfListView.Behaviors>
-                            <local:EventToCommandBehavior EventName="Loaded" Command="{Binding LoadedCommand}"
+                            <local:sfEventToCommandBehavior EventName="Loaded" Command="{Binding LoadedCommand}"
                                         Converter="{StaticResource EventArgs}" />
-                            <local:EventToCommandBehavior EventName="ItemTapped" Command="{Binding TapCommand}"
+                            <local:sfEventToCommandBehavior EventName="ItemTapped" Command="{Binding TapCommand}"
                                         Converter="{StaticResource EventArgs}" />
-                            <local:EventToCommandBehavior EventName="Swiping" Command="{Binding SwipeCommand}"
+                            <local:sfEventToCommandBehavior EventName="Swiping" Command="{Binding SwipeCommand}"
                                         Converter="{StaticResource EventArgs}" />
                         </listView:SfListView.Behaviors>
                     </listView:SfListView>

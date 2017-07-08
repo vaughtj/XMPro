@@ -69,7 +69,7 @@ namespace XMProApp.ViewModels
             set { SetProperty(ref _parcels, value); }
         }
 
-        public ParcelViewModel(INavigationService navigationService, IPageDialogService pageDialogService, IParcelRepository parcelRepository) : base(navigationService)
+        public ParcelViewModel(INavigationService navigationService, IPageDialogService pageDialogService, IParcelRepository parcelRepository) : base(navigationService, pageDialogService)
         {
             _pageDialogueService = pageDialogService;
             _parcelRepository = parcelRepository;

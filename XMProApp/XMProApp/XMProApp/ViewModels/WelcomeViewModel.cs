@@ -1,6 +1,7 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
+using Prism.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace XMProApp.ViewModels
     {
         private string _name;
         private string _welcomeMessage;
+        IPageDialogService _pageDialogueService { get; }
         public string Name
         {
             get { return _name; }
@@ -22,7 +24,7 @@ namespace XMProApp.ViewModels
             get { return _welcomeMessage; }
             set { SetProperty(ref _welcomeMessage, value); }
         }
-        public WelcomeViewModel(INavigationService navigationService) : base(navigationService)
+        public WelcomeViewModel(INavigationService navigationService, IPageDialogService pageDialogueService) : base(navigationService, pageDialogueService)
         {
             Title = "Welcome";
         }

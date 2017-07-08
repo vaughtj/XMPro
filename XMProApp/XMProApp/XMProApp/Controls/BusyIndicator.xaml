@@ -5,6 +5,6 @@
       xmlns:syncfusion="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
       x:Name="this">
 
-    <syncfusion:SfBusyIndicator IsBusy="{Binding ImBusy, Source={x:Reference this}}"  Title="Loading.." ViewBoxHeight="150" ViewBoxWidth="150" TextColor="Blue"  AnimationType="Ball"/>
+    <syncfusion:SfBusyIndicator IsBusy="{Binding IsBusy}"  Title="Loading.." ViewBoxHeight="150" ViewBoxWidth="150" TextColor="Blue"  AnimationType="Ball"/>
     <Label Text="{Binding Text, Source={x:Reference this}}" />
 </Grid>

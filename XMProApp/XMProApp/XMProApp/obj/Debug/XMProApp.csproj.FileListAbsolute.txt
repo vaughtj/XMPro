@@ -226,4 +226,9 @@ C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\obj\Debug\XMProApp.Views
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\obj\Debug\XMProApp.Views.ParcelDetail.xaml.g.cs
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\obj\Debug\XMProApp.dll
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\obj\Debug\XMProApp.pdb
-C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\obj\Debug\XMProApp.csprojResolveAssemblyReference.cache
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Connectivity.Abstractions.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Connectivity.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Connectivity.pdb
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Connectivity.xml
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Connectivity.Abstractions.pdb
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Connectivity.Abstractions.xml
