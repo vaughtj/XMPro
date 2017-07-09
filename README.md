@@ -2,9 +2,8 @@
 XMPro Coding Challenge
 
 # Features
-Xamarin Forms
-Syncfusion
-SQLite
-
-Connection Polling
-Settings
+Xamarin Forms</br>
+Syncfusion</br>
+SQLite</br>
+Network Connection Polling</br>
+Settings</br>
