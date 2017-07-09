@@ -32,12 +32,13 @@ namespace XMProApp.iOS
             new SfBusyIndicatorRenderer();
             SfListViewRenderer.Init();
             SfPullToRefreshRenderer.Init();
-            LoadApplication(new App(new iOSInitializer()));
+
+            string dbPath = FileAccessHelper.GetLocalFilePath("XMPro.db3");
+
+            LoadApplication(new App(dbPath, new iOSInitializer()));
 
             return base.FinishedLaunching(app, options);
         }
-
-
     }
 
     public class iOSInitializer : IPlatformInitializer

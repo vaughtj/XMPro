@@ -15,6 +15,12 @@ C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\Simple.OData.Client.Dynamic.dll
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\Simple.OData.Client.V3.Adapter.dll
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\Simple.OData.Client.V4.Adapter.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\SQLite-net.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\SQLitePCLRaw.batteries_green.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\SQLitePCLRaw.batteries_v2.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\SQLitePCLRaw.core.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\SQLitePCLRaw.lib.e_sqlite3.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\Syncfusion.Core.XForms.dll
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\Syncfusion.DataSource.Portable.dll
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\Syncfusion.GridCommon.Portable.dll
@@ -45,6 +51,7 @@ C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\mscorlib.dll
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\System.Core.dll
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\System.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\System.IO.Compression.dll
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\System.Net.Http.dll
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\System.Xml.dll
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\System.Xml.Linq.dll

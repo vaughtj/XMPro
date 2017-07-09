@@ -30,7 +30,8 @@ namespace XMProApp.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App(new AndroidInitializer()));
+            string dbPath = FileAccessHelper.GetLocalFilePath("XMPro.db3");
+            LoadApplication(new App(dbPath, new AndroidInitializer()));
         }
 
     }

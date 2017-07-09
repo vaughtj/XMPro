@@ -299,7 +299,15 @@ C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\Plugin.C
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\Plugin.Connectivity.Abstractions.pdb
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\Plugin.Connectivity.Abstractions.xml
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\Plugin.Connectivity.dll.mdb
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\SQLite-net.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\SQLitePCLRaw.core.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\SQLitePCLRaw.lib.e_sqlite3.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\XMProApp.dll.mdb
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\SQLite-net.xml
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\SQLite-net.dll.mdb
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\XMProApp.Droid.dll.mdb
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\FormsViewGroup.dll.mdb
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\Plugin.Connectivity.dll.mdb
@@ -308,3 +316,4 @@ C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\XMProApp.dll.mdb
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\XMProApp.Droid.dll.mdb
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\SQLite-net.dll.mdb

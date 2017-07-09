@@ -1,4 +1,5 @@
 ﻿using Prism.Mvvm;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,10 @@ namespace XMProApp.Models
 {
     public class Parcels : BindableBase
     {
+        [PrimaryKey]
         public Int64 ParcelID { get; set; }
         public Int64 DropOffStoreID { get; set; }
-
         public string CustomerName { get; set; }
-
-        private string _destinationAddress;
         public string DestinationAddress  { get; set; }
         public string DestinationCity { get; set; }
         public string DestinationST { get; set; }
@@ -25,11 +24,6 @@ namespace XMProApp.Models
         public string Width { get; set; }
         public string Length { get; set; }
         public decimal Weight { get; set; }
-
-        public bool shouldSave { get; set; }
-
-
-
     }
 
     public class ODATAObject

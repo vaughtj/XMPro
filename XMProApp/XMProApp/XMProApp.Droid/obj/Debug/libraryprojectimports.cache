@@ -4,6 +4,11 @@
   <ResolvedResourceDirectories>
     <ResolvedResourceDirectory>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\Ninject\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\Plugin.Connectivity\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\SQLitePCLRaw.batteries_green\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\SQLitePCLRaw.batteries_v2\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\SQLitePCLRaw.core\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\SQLitePCLRaw.lib.e_sqlite3\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\SQLitePCLRaw.provider.e_sqlite3\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\Syncfusion.SfBusyIndicator.Android\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\Syncfusion.SfListView.XForms.Android\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\Syncfusion.SfPullToRefresh.XForms.Android\library_project_imports\res</ResolvedResourceDirectory>
@@ -14,6 +19,11 @@
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Ninject\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.Connectivity\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\SQLitePCLRaw.batteries_green\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\SQLitePCLRaw.batteries_v2\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\SQLitePCLRaw.core\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\SQLitePCLRaw.lib.e_sqlite3\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\SQLitePCLRaw.provider.e_sqlite3\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Syncfusion.SfListView.XForms.Android\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Syncfusion.SfPullToRefresh.XForms.Android\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\assets</ResolvedAssetDirectory>
@@ -24,6 +34,11 @@
   <ResolvedResourceDirectoryStamps>
     <ResolvedResourceDirectoryStamp>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\Ninject.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\Plugin.Connectivity.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\SQLitePCLRaw.batteries_green.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\SQLitePCLRaw.batteries_v2.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\SQLitePCLRaw.core.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\SQLitePCLRaw.lib.e_sqlite3.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\SQLitePCLRaw.provider.e_sqlite3.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\Syncfusion.SfBusyIndicator.Android.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\Syncfusion.SfListView.XForms.Android.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\__library_projects__\Syncfusion.SfPullToRefresh.XForms.Android.stamp</ResolvedResourceDirectoryStamp>

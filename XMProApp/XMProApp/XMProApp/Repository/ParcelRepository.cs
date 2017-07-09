@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Simple.OData.Client;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,14 @@ namespace XMProApp.Repository
     public class ParcelRepository : IParcelRepository
     {
         IDataService _dataService;
+        IDbFactory _dbFactory;
+        SQLiteAsyncConnection conn;
 
-        public ParcelRepository(IDataService dataService)
+        public ParcelRepository(IDataService dataService, IDbFactory dbFactory)
         {
+            _dbFactory = dbFactory; 
             _dataService = dataService;
+            conn = _dbFactory.GetConn();
         }
         public async Task<IEnumerable<Parcels>> GetItemsAsync()
         {
@@ -24,14 +29,25 @@ namespace XMProApp.Repository
             ODATAObject myODataObject = new ODATAObject();
             List<Parcels> myParcels = new List<Parcels>();
 
-            dynamic results = await _dataService.getDataFromService("http://192.168.1.73:8080/Parcels");
-
+            dynamic results = await _dataService.getDataFromService("http://192.168.1.147:8080/Parcels");
 
             if (results != null)
             {
                 myODataObject = JsonConvert.DeserializeObject<ODATAObject>(results);
                 myParcels = myODataObject.value;
             }
+            
+            foreach (Parcels par in myParcels)
+            {
+                int result = 0;
+                try
+                {
+                    result = await conn.InsertAsync(par);
+                }
+                catch { }
+            }
+
+            myParcels = await conn.Table<Parcels>().ToListAsync();
 
             return myParcels;
         }
@@ -39,12 +55,16 @@ namespace XMProApp.Repository
         {            
             Parcels myParcels = new Parcels();
 
-            dynamic results = await _dataService.getDataFromService("http://192.168.1.73:8080/Parcels?Id=" + parcelID);
+            //dynamic results = await _dataService.getDataFromService("http://192.168.1.147:8080/Parcels?Id=" + parcelID);
 
-            if (results != null)
-            {
-                myParcels = JsonConvert.DeserializeObject<Parcels>(results);
-            }
+            //if (results != null)
+            //{
+            //    myParcels = JsonConvert.DeserializeObject<Parcels>(results);
+            //}
+
+            var query = conn.Table<Parcels>().Where(v => v.ParcelID == parcelID).FirstOrDefaultAsync();
+
+            myParcels = await query;
 
             return myParcels;
         }
@@ -53,7 +73,7 @@ namespace XMProApp.Repository
         {            
             bool _return = false;
 
-            dynamic results = await _dataService.putDataToService("http://192.168.1.73:8080/Parcels?Id=" + _parcel.ParcelID, _parcel);
+            dynamic results = await _dataService.putDataToService("http://192.168.1.147:8080/Parcels?Id=" + _parcel.ParcelID, _parcel);
 
             return _return;
         }
@@ -66,7 +86,7 @@ namespace XMProApp.Repository
 
             ODataClientSettings cSettings = new ODataClientSettings();
             cSettings.PayloadFormat = ODataPayloadFormat.Json;
-            cSettings.BaseUri = new Uri(string.Format("http://192.168.1.73:8080/", string.Empty));
+            cSettings.BaseUri = new Uri(string.Format("http://192.168.1.147:8080/", string.Empty));
 
             var client = new ODataClient(cSettings);
 
@@ -89,20 +109,32 @@ namespace XMProApp.Repository
 
             ODataClientSettings cSettings = new ODataClientSettings();
             cSettings.PayloadFormat = ODataPayloadFormat.Json;
-            cSettings.BaseUri = new Uri(string.Format("http://192.168.1.73:8080/", string.Empty));
+            cSettings.BaseUri = new Uri(string.Format("http://192.168.1.147:8080/", string.Empty));
 
             var client = new ODataClient(cSettings);
-            //var x = ODataDynamic.Expression;
             await Task.Run(async () =>
             {
-                var products = await client
+                var parcels = await client
                 .For<Parcels>()
                 .FindEntriesAsync();
 
-                foreach (var package in products)
+                //foreach (var package in parcels)
+                //{
+                //    myParcels.Add(package);
+                //}
+
+                foreach (Parcels par in parcels)
                 {
-                    myParcels.Add(package);
+                    int result = 0;
+                    try
+                    {
+                        result = await conn.InsertAsync(par);
+                    }
+                    catch { }
                 }
+
+                myParcels = await conn.Table<Parcels>().ToListAsync();
+
             });
 
             return myParcels;
@@ -115,7 +147,7 @@ namespace XMProApp.Repository
 
             ODataClientSettings cSettings = new ODataClientSettings();
             cSettings.PayloadFormat = ODataPayloadFormat.Json;
-            cSettings.BaseUri = new Uri(string.Format("http://192.168.1.73:8080/", string.Empty));
+            cSettings.BaseUri = new Uri(string.Format("http://192.168.1.147:8080/", string.Empty));
 
             var client = new ODataClient(cSettings);
 

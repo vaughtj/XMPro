@@ -24,7 +24,6 @@ namespace XMProApp.Service
                 if (response.IsSuccessStatusCode)
                 {
                     var json = await response.Content.ReadAsStringAsync();
-                    //data = JsonConvert.DeserializeObject(json);
                     data = json;
                 }
             }

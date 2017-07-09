@@ -8,7 +8,13 @@ namespace XMProApp
 {
     public partial class App : PrismApplication
     {
-        public App(IPlatformInitializer initializer = null) : base(initializer) { }
+        public static string _dbPath;
+        public App(string dbPath, IPlatformInitializer initializer = null) : base(initializer)
+        {
+            _dbPath = dbPath;
+            IDbFactory _dbFactory = new DbFactory();
+            _dbFactory.Initialize(_dbPath);
+        }
 
         protected override void OnInitialized()
         {
@@ -29,6 +35,7 @@ namespace XMProApp
             //Register Interfaces
             Container.Bind<IParcelRepository>().To<ParcelRepository>();
             Container.Bind<IDataService>().To<DataService>();
+            Container.Bind<IDbFactory>().To<DbFactory>();
 
         }
     }
