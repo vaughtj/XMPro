@@ -80,7 +80,7 @@ namespace XMProApp.ViewModels
                 await Task.Run(async () => {
                     int Id = Convert.ToInt32(parameters["Id"]);
 
-                    var result = await _parcelRepository.GetItemAsync(Id);
+                    var result = await _parcelRepository.GetOdataItemAsync(Id);
                     MyParcel = (Parcels)result;
                     shouldSave = false;
                 });

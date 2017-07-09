@@ -238,3 +238,8 @@ C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\SQLitePCLRaw.b
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\SQLitePCLRaw.batteries_v2.dll
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\SQLitePCLRaw.core.dll
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\SQLite-net.xml
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Settings.Abstractions.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Settings.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Settings.xml
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Settings.Abstractions.pdb
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Settings.Abstractions.xml

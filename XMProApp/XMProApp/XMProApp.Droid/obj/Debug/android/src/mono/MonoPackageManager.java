@@ -108,6 +108,8 @@ class MonoPackageManager_Resources {
 		"Ninject.dll",
 		"Plugin.Connectivity.Abstractions.dll",
 		"Plugin.Connectivity.dll",
+		"Plugin.Settings.Abstractions.dll",
+		"Plugin.Settings.dll",
 		"Prism.dll",
 		"Prism.Forms.dll",
 		"Prism.Ninject.Forms.dll",

@@ -317,3 +317,13 @@ C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\XMProApp.dll.mdb
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\XMProApp.Droid.dll.mdb
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\SQLite-net.dll.mdb
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\Plugin.Settings.Abstractions.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\Plugin.Settings.dll
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\Plugin.Settings.pdb
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\Plugin.Settings.xml
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\Plugin.Settings.Abstractions.pdb
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\Plugin.Settings.Abstractions.xml
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\Plugin.Settings.dll.mdb
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\bin\Debug\Plugin.Settings.Abstractions.dll.mdb
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\Plugin.Settings.Abstractions.dll.mdb
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\Plugin.Settings.dll.mdb

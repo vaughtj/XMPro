@@ -118,23 +118,27 @@ namespace XMProApp.Repository
                 .For<Parcels>()
                 .FindEntriesAsync();
 
-                //foreach (var package in parcels)
-                //{
-                //    myParcels.Add(package);
-                //}
-
-                foreach (Parcels par in parcels)
+                if (App._useSQLite)
                 {
-                    int result = 0;
-                    try
+                    foreach (Parcels par in parcels)
                     {
-                        result = await conn.InsertAsync(par);
+                        int result = 0;
+                        try
+                        {
+                            result = await conn.InsertAsync(par);
+                        }
+                        catch { }
                     }
-                    catch { }
+
+                    myParcels = await conn.Table<Parcels>().ToListAsync();
                 }
-
-                myParcels = await conn.Table<Parcels>().ToListAsync();
-
+                else
+                {
+                    foreach (var package in parcels)
+                    {
+                        myParcels.Add(package);
+                    }
+                }
             });
 
             return myParcels;
@@ -144,32 +148,38 @@ namespace XMProApp.Repository
         {
             Parcels myParcels = new Parcels();
 
-
-            ODataClientSettings cSettings = new ODataClientSettings();
-            cSettings.PayloadFormat = ODataPayloadFormat.Json;
-            cSettings.BaseUri = new Uri(string.Format("http://192.168.1.147:8080/", string.Empty));
-
-            var client = new ODataClient(cSettings);
-
-            await Task.Run(async () =>
+            if (App._useSQLite)
             {
-                var products = await client
-                    .For<Parcels>()
-                    .Filter(x => x.ParcelID == parcelID)
-                    .FindEntriesAsync();
+                var query = conn.Table<Parcels>().Where(v => v.ParcelID == parcelID).FirstOrDefaultAsync();
 
+                myParcels = await query;
 
+                return myParcels;
+            }
+            else
+            {
+                ODataClientSettings cSettings = new ODataClientSettings();
+                cSettings.PayloadFormat = ODataPayloadFormat.Json;
+                cSettings.BaseUri = new Uri(string.Format("http://192.168.1.147:8080/", string.Empty));
 
-                foreach (var package in products)
+                var client = new ODataClient(cSettings);
+
+                await Task.Run(async () =>
                 {
-                    if (package.ParcelID == parcelID)
+                    var products = await client
+                        .For<Parcels>()
+                        .Filter(x => x.ParcelID == parcelID)
+                        .FindEntriesAsync();
+
+                    foreach (var package in products)
                     {
-                        myParcels = package;
+                        if (package.ParcelID == parcelID)
+                        {
+                            myParcels = package;
+                        }
                     }
-                }
-            });
-
-
+                });
+            }
 
             return myParcels;
         }
