@@ -21,6 +21,7 @@ Effects</br>
 Converters - event to command</br>
 Controls</br>
 List Context Actions - Right/Left Swipe</br>
+Pull to refresh</br>
 
 
 # Soon-to-come
