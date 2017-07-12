@@ -143,6 +143,27 @@
                                 </ViewCell>
                             </DataTemplate>
                         </listView:SfListView.ItemTemplate>
+                        
+                        
+                        
+                        <!--<syncfusion:SfListView.Triggers>
+
+                            <DataTrigger TargetType="syncfusion:SfListView" Binding="{Binding Path=IsLandscapeMode}" Value="True">
+
+                                <Setter Property="syncfusion:SfListView.LayoutManager" Value="{StaticResource LandscapeGridLayout}"></Setter>
+
+                            </DataTrigger>
+
+                            <DataTrigger TargetType="syncfusion:SfListView" Binding="{Binding Path=IsLandscapeMode}" Value="False">
+
+                                <Setter Property="syncfusion:SfListView.LayoutManager" Value="{StaticResource PortraitGridLayout}"></Setter>
+
+                            </DataTrigger>
+
+                        </syncfusion:SfListView.Triggers>-->
+                        
+                        
+                        
                         <listView:SfListView.Behaviors>
                             <local:sfEventToCommandBehavior EventName="Loaded" Command="{Binding LoadedCommand}"
                                         Converter="{StaticResource EventArgs}" />

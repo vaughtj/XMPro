@@ -28,16 +28,27 @@ namespace XMProApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
 
+            SetupAppearance();
+
             global::Xamarin.Forms.Forms.Init();
             new SfBusyIndicatorRenderer();
             SfListViewRenderer.Init();
             SfPullToRefreshRenderer.Init();
 
-            string dbPath = FileAccessHelper.GetLocalFilePath("XMPro.db3");
-
+            string dbPath = FileAccessHelper.GetLocalFilePath("XMPro.db3");
             LoadApplication(new App(dbPath, new iOSInitializer()));
 
             return base.FinishedLaunching(app, options);
+        }
+
+        private static void SetupAppearance()
+        {
+            //UISwitch.Appearance.OnTintColor = UIColor.Orange;
+            //UISlider.Appearance.MinimumTrackTintColor = UIColor.Magenta;
+            //UISlider.Appearance.MaximumTrackTintColor = UIColor.Cyan;
+            UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(51, 134, 238);
+            UINavigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes()
+            { TextColor = UIColor.White, Font = UIFont.ItalicSystemFontOfSize(20) });
         }
     }
 

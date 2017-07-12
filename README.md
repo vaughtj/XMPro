@@ -16,7 +16,8 @@ Device file system path for db storage</br>
 Commanding</br>
 Behaviors</br>
 Gestures</br>
-Converters - event to comand</br>
+Effects</br>
+Converters - event to command</br>
 Controls</br>
 List Context Actions - Right/Left Swipe</br>
 
@@ -25,7 +26,6 @@ List Context Actions - Right/Left Swipe</br>
 Realm.io</br>
 -encrypted database</br>
 Renders</br>
-Effects</br>
 Triggers</br>
 Device.Idiom</br>
 MessagingCenter between View Models</br>

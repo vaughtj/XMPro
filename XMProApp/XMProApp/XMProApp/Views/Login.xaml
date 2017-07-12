@@ -6,6 +6,7 @@
              x:Class="XMProApp.Views.Login"
              xmlns:ctrl="clr-namespace:XMProApp.Controls;assembly=XMProApp"
              xmlns:syncfusion="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+             xmlns:ef="clr-namespace:XMProApp.Effects"
              Title="{Binding Title}">
 
 
@@ -34,7 +35,11 @@
             <StackLayout Grid.Row="3" VerticalOptions="FillAndExpand">
                 <Entry Text="{Binding UserName}" Placeholder="Enter your username" VerticalOptions="EndAndExpand" />
                 <Entry Text="{Binding Password}" IsPassword="true" Placeholder="Enter your password" VerticalOptions="StartAndExpand" />
-                <Button Text="Submit" Command="{Binding LoginCommand}" />
+                <Button Text="Submit" Command="{Binding LoginCommand}">
+                    <Button.Effects>
+                        <ef:ButtonFontEffect />
+                    </Button.Effects>
+                </Button>
             </StackLayout>
         </Grid>
     </ContentPage.Content>
