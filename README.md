@@ -8,7 +8,7 @@ MVVM</br>
 Prism</br>
 Syncfusion</br>
 SQLite</br>
-Offline-first app</br>
+Offline-first approach</br>
 IoC Container - Ninject</br>
 Design Patterns</br>
 -Repository</br>
