@@ -90,11 +90,12 @@ namespace XMProApp.ViewModels
         {
             IsBusy = true;
 
-            await Task.Run(async () => {
-                var result = await _parcelRepository.GetODataItemsAsync();
+            await Task.Run(async () =>
+            {
+                var result = await _parcelRepository.GetItemsAsync();
                 MyParcels = new ObservableCollection<Parcels>(result);
             });
-            
+
             IsBusy = false;
         }
 

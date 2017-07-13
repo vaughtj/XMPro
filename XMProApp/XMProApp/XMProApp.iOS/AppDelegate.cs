@@ -35,7 +35,8 @@ namespace XMProApp.iOS
             SfListViewRenderer.Init();
             SfPullToRefreshRenderer.Init();
 
-            string dbPath = FileAccessHelper.GetLocalFilePath("XMPro.db3");
+            string dbPath = FileAccessHelper.GetLocalFilePath("XMPro.db3");
+
             LoadApplication(new App(dbPath, new iOSInitializer()));
 
             return base.FinishedLaunching(app, options);

@@ -9,7 +9,12 @@ Prism</br>
 Syncfusion</br>
 SQLite</br>
 Offline-first app</br>
-IoC - Ninject</br>
+IoC Container - Ninject</br>
+Design Patterns</br>
+-Repository</br>
+-Dependency Injection</br>
+-Singleton</br>
+-Factory</br>
 Network Connection Polling</br>
 Application Settings</br>
 WebAPI data source using ODATA</br>
