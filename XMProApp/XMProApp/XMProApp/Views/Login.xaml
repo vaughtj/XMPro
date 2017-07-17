@@ -7,6 +7,7 @@
              xmlns:ctrl="clr-namespace:XMProApp.Controls;assembly=XMProApp"
              xmlns:syncfusion="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              xmlns:ef="clr-namespace:XMProApp.Effects"
+             xmlns:render="clr-namespace:XMProApp.Renderers"
              Title="{Binding Title}">
 
 
@@ -40,6 +41,7 @@
                         <ef:ButtonFontEffect />
                     </Button.Effects>
                 </Button>
+            <render:HyperlinkLabel Text="http://www.xmpro.com"></render:HyperlinkLabel>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

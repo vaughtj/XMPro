@@ -207,6 +207,7 @@
   <ItemGroup>
     <Compile Include="FileAccessHelper.cs" />
     <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="HyperlinkLabelRenderer.Droid.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="ButtonFontEffect.Droid.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />

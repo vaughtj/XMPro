@@ -58,6 +58,7 @@ namespace XMProApp
             Container.Bind<IDataService>().To<DataService>();
             Container.Bind<IDbFactory>().To<DbFactory>();
 
+            Container.RegisterTypeForNavigation<Renderer>();
         }
     }
 }

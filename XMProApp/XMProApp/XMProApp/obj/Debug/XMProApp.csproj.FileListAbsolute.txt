@@ -232,7 +232,6 @@ C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Connect
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Connectivity.xml
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Connectivity.Abstractions.pdb
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Connectivity.Abstractions.xml
-C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\obj\Debug\XMProApp.csprojResolveAssemblyReference.cache
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\SQLite-net.dll
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\SQLitePCLRaw.batteries_green.dll
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\SQLitePCLRaw.batteries_v2.dll
@@ -243,3 +242,4 @@ C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Setting
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Settings.xml
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Settings.Abstractions.pdb
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Settings.Abstractions.xml
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\obj\Debug\XMProApp.Views.Renderer.xaml.g.cs

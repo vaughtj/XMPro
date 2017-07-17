@@ -92,6 +92,7 @@
   <ItemGroup>
     <Compile Include="FileAccessHelper.cs" />
     <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="HyperlinkLabelRenderer.iOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="app.config" />

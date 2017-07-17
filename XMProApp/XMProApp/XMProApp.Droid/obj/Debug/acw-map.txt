@@ -1,3 +1,7 @@
+XMProApp.Droid.HyperlinkLabelRenderer, XMProApp.Droid;md55ffb47d7b2bf866efdb9d9b186840aa0.HyperlinkLabelRenderer
+XMProApp.Droid.HyperlinkLabelRenderer, XMProApp.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md55ffb47d7b2bf866efdb9d9b186840aa0.HyperlinkLabelRenderer
+XMProApp.Droid.HyperlinkLabelRenderer;md55ffb47d7b2bf866efdb9d9b186840aa0.HyperlinkLabelRenderer
+xmproapp.droid.HyperlinkLabelRenderer;md55ffb47d7b2bf866efdb9d9b186840aa0.HyperlinkLabelRenderer
 XMProApp.Droid.MainActivity, XMProApp.Droid;md55ffb47d7b2bf866efdb9d9b186840aa0.MainActivity
 XMProApp.Droid.MainActivity, XMProApp.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md55ffb47d7b2bf866efdb9d9b186840aa0.MainActivity
 XMProApp.Droid.MainActivity;md55ffb47d7b2bf866efdb9d9b186840aa0.MainActivity
