@@ -23,6 +23,7 @@ Commanding</br>
 Behaviors</br>
 Gestures</br>
 Effects</br>
+Renders</br>
 Converters - event to command</br>
 Controls</br>
 List Context Actions - Right/Left Swipe</br>
@@ -32,7 +33,6 @@ Pull to refresh</br>
 # Soon-to-come
 Realm.io</br>
 -encrypted database</br>
-Renders</br>
 Triggers</br>
 Device.Idiom</br>
 MessagingCenter between View Models</br>
