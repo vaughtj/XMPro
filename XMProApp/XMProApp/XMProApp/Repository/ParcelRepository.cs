@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using XMProApp.Models;
 using XMProApp.Service;
+using XMProApp.ViewModels;
 
 namespace XMProApp.Repository
 {
@@ -118,7 +119,7 @@ namespace XMProApp.Repository
                 .For<Parcels>()
                 .FindEntriesAsync();
 
-                if (App._useSQLite)
+                if (AppViewModel._useSQLite)
                 {
                     foreach (Parcels par in parcels)
                     {
@@ -148,7 +149,7 @@ namespace XMProApp.Repository
         {
             Parcels myParcels = new Parcels();
 
-            if (App._useSQLite)
+            if (AppViewModel._useSQLite)
             {
                 var query = conn.Table<Parcels>().Where(v => v.ParcelID == parcelID).FirstOrDefaultAsync();
 

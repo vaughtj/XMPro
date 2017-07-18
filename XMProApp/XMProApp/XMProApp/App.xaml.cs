@@ -4,44 +4,48 @@ using Xamarin.Forms;
 using XMProApp.Repository;
 using XMProApp.Service;
 using XMProApp.Helpers;
-using Plugin.Settings.Abstractions;
+
 using Plugin.Settings;
+using XMProApp.ViewModels;
 
 namespace XMProApp
 {
     public partial class App : PrismApplication
     {
-        public static string _dbPath;
-        public static bool _useSQLite;
-        private static ISettings AppSettings => CrossSettings.Current;
-        static bool IsSQLiteSet => AppSettings.Contains("SQLite");
-
         public App(string dbPath, IPlatformInitializer initializer = null) : base(initializer)
         {
-            _dbPath = dbPath;
+            AppViewModel._dbPath = dbPath;
             IDbFactory _dbFactory = new DbFactory();
-            _dbFactory.Initialize(_dbPath);
-            GetSettings();
+            _dbFactory.Initialize(AppViewModel._dbPath);
+            AppViewModel.LoadSettings();
         }
 
-        private void GetSettings()
-        {
-            if (IsSQLiteSet)
-            {
-                _useSQLite = Settings.SQLiteSettings;
-            }
-            else
-            {
-                Settings.SQLiteSettings = true;
-                _useSQLite = Settings.SQLiteSettings;
-            }
-        }
 
         protected override void OnInitialized()
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("Login");
+            if (Xamarin.Forms.Device.Idiom == TargetIdiom.Phone)
+            {
+                NavigationService.NavigateAsync("Login");
+            }
+            else if (Xamarin.Forms.Device.Idiom == TargetIdiom.Tablet)
+            {
+                NavigationService.NavigateAsync("Login");
+            }
+            else if (Xamarin.Forms.Device.Idiom == TargetIdiom.Desktop)
+            {
+                NavigationService.NavigateAsync("Login");
+            }
+            else if (Xamarin.Forms.Device.Idiom == TargetIdiom.Unsupported)
+            {
+                NavigationService.NavigateAsync("Login");
+            }
+            else
+            {
+                NavigationService.NavigateAsync("Login");
+            }
+            
             //NavigationService.NavigateAsync("Navigation/Parcel");
         }
 

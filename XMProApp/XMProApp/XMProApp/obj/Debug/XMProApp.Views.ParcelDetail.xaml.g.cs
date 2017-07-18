@@ -17,12 +17,12 @@ namespace XMProApp.Views {
     public partial class ParcelDetail : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator busyindicator;
+        private global::XMProApp.Controls.BusyIndicator busyIndicator;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(ParcelDetail));
-            busyindicator = this.FindByName<global::Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator>("busyindicator");
+            busyIndicator = this.FindByName<global::XMProApp.Controls.BusyIndicator>("busyIndicator");
         }
     }
 }

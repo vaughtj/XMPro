@@ -243,3 +243,4 @@ C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Setting
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Settings.Abstractions.pdb
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\bin\Debug\Plugin.Settings.Abstractions.xml
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\obj\Debug\XMProApp.Views.Renderer.xaml.g.cs
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp\obj\Debug\XMProApp.csprojResolveAssemblyReference.cache

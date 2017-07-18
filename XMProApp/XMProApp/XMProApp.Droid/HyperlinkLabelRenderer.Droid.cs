@@ -15,6 +15,7 @@ namespace XMProApp.Droid
             base.OnElementChanged(e);
 
             Linkify.AddLinks(Control, MatchOptions.All);
+            Control.SetLinkTextColor(Color.Blue.ToAndroid());
         }
     }
 }

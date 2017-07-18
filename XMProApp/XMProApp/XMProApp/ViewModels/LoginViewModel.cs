@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 using XMProApp.Models;
 using XMProApp.Service;
 
@@ -47,6 +48,10 @@ namespace XMProApp.ViewModels
 
             
 
+        }
+        public void Clear()
+        {
+            MessagingCenter.Send(this, "Clear");
         }
 
         private async void OnLoginCommandExecuted()

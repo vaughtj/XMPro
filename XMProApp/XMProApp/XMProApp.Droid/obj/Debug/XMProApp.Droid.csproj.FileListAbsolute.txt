@@ -327,3 +327,4 @@ C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\XMProApp.dll.mdb
 C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\android\assets\XMProApp.Droid.dll.mdb
+C:\Development\Xamarin\XMPro\XMProApp\XMProApp\XMProApp.Droid\obj\Debug\res\drawable\xamarin.png

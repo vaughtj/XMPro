@@ -51,6 +51,7 @@
         <image name="Icon-Small.png" width="29" height="29"/>
         <image name="XMProLogo.png" width="271" height="146"/>
         <image name="Delete.png" width="30" height="30"/>
+        <image name="xamarin.png" width="72" height="72"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedScreenMetrics key="destination" type="retina55"/>

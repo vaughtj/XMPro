@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using XMProApp.Models;
+using XMProApp.ViewModels;
 
 namespace XMProApp.Repository
 {
@@ -31,12 +32,12 @@ namespace XMProApp.Repository
                 return instance.conn;
             else
             {
-                Initialize(App._dbPath);
+                Initialize(AppViewModel._dbPath);
 
                 if (instance.conn != null)
                     return instance.conn;
                 else
-                    throw new ArgumentNullException(nameof(App._dbPath));
+                    throw new ArgumentNullException(nameof(AppViewModel._dbPath));
             }
         }
 

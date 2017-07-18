@@ -3,23 +3,26 @@
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
                 prism:ViewModelLocator.AutowireViewModel="True"        
-                xmlns:local="clr-namespace:XMProApp.Behaviors;assembly=XMProApp"
-                xmlns:cvtr="clr-namespace:XMProApp.Converters;assembly=XMProApp"
+                xmlns:behavior="clr-namespace:XMProApp.Behaviors;assembly=XMProApp"
+                xmlns:converter="clr-namespace:XMProApp.Converters;assembly=XMProApp"
                 xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
                 xmlns:dataSource="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable"
                 xmlns:syncfusion="clr-namespace:Syncfusion.SfPullToRefresh.XForms;assembly=Syncfusion.SfPullToRefresh.XForms"
-                xmlns:syncfusionBI="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+                xmlns:control="clr-namespace:XMProApp.Controls"
                 x:Class="XMProApp.Views.Parcel"             
                 Title="{Binding Title}">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="MenuItem1" Order="Primary" Icon="xamarin.png" Priority="0" />
+        <ToolbarItem Name="MenuItem2" Order="Primary" Text="Item 2" Priority="1" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Resources>
         <ResourceDictionary>
-            <cvtr:sfEventArgsConverter x:Key="EventArgs" />
-            <cvtr:NegateBooleanConverter x:Key="inverter"/>
+            <converter:sfEventArgsConverter x:Key="EventArgs" />
+            <converter:NegateBooleanConverter x:Key="inverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-
         <!--Pull to Refresh-->
         <syncfusion:SfPullToRefresh x:Name="pullToRefresh"
                                     IsRefreshing="False" 
@@ -35,7 +38,7 @@
 
                 <Grid>
                     <!--Busy Indicator-->
-                    <syncfusionBI:SfBusyIndicator x:Name="busyindicator" Title="Loading.." IsBusy="{Binding IsBusy}"  ViewBoxHeight="150" ViewBoxWidth="150" TextColor="Blue"  AnimationType="Ball"/>
+                    <control:BusyIndicator x:Name="busyIndicator" Text="Loading..."></control:BusyIndicator>
                     <listView:SfListView x:Name="listView" ItemsSource="{Binding Path=MyParcels}" ItemSize="100" AllowSwiping="True" SelectionMode="Single">
 
                         <!--Sorting by DataSource-->
@@ -142,34 +145,31 @@
                                     </ViewCell.View>
                                 </ViewCell>
                             </DataTemplate>
+
+                            <!--<listView:SfListView.Triggers>
+
+                                <DataTrigger TargetType="listView:SfListView" Binding="{Binding Path=IsLandscapeMode}" Value="True">
+
+                                    <Setter Property="listView:SfListView.LayoutManager" Value="{StaticResource LandscapeGridLayout}"></Setter>
+
+                                </DataTrigger>
+
+                                <DataTrigger TargetType="listView:SfListView" Binding="{Binding Path=IsLandscapeMode}" Value="False">
+
+                                    <Setter Property="listView:SfListView.LayoutManager" Value="{StaticResource PortraitGridLayout}"></Setter>
+
+                                </DataTrigger>
+
+                            </listView:SfListView.Triggers>-->
+
                         </listView:SfListView.ItemTemplate>
-                        
-                        
-                        
-                        <!--<syncfusion:SfListView.Triggers>
 
-                            <DataTrigger TargetType="syncfusion:SfListView" Binding="{Binding Path=IsLandscapeMode}" Value="True">
-
-                                <Setter Property="syncfusion:SfListView.LayoutManager" Value="{StaticResource LandscapeGridLayout}"></Setter>
-
-                            </DataTrigger>
-
-                            <DataTrigger TargetType="syncfusion:SfListView" Binding="{Binding Path=IsLandscapeMode}" Value="False">
-
-                                <Setter Property="syncfusion:SfListView.LayoutManager" Value="{StaticResource PortraitGridLayout}"></Setter>
-
-                            </DataTrigger>
-
-                        </syncfusion:SfListView.Triggers>-->
-                        
-                        
-                        
                         <listView:SfListView.Behaviors>
-                            <local:sfEventToCommandBehavior EventName="Loaded" Command="{Binding LoadedCommand}"
+                            <behavior:sfEventToCommandBehavior EventName="Loaded" Command="{Binding LoadedCommand}"
                                         Converter="{StaticResource EventArgs}" />
-                            <local:sfEventToCommandBehavior EventName="ItemTapped" Command="{Binding TapCommand}"
+                            <behavior:sfEventToCommandBehavior EventName="ItemTapped" Command="{Binding TapCommand}"
                                         Converter="{StaticResource EventArgs}" />
-                            <local:sfEventToCommandBehavior EventName="Swiping" Command="{Binding SwipeCommand}"
+                            <behavior:sfEventToCommandBehavior EventName="Swiping" Command="{Binding SwipeCommand}"
                                         Converter="{StaticResource EventArgs}" />
                         </listView:SfListView.Behaviors>
                     </listView:SfListView>

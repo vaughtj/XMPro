@@ -40,6 +40,8 @@
     <Compile Include="Behaviors\CustomBehavior.cs" />
     <Compile Include="Behaviors\sfEventToCommandBehavior.cs" />
     <Compile Include="Behaviors\ListViewSelectedItemBehavior.cs" />
+    <Compile Include="Common\ColorResources.cs" />
+    <Compile Include="Common\FontResources.cs" />
     <Compile Include="Controls\BusyIndicator.xaml.cs">
       <DependentUpon>BusyIndicator.xaml</DependentUpon>
     </Compile>
@@ -58,6 +60,7 @@
     <Compile Include="Repository\ParcelRepository.cs" />
     <Compile Include="Service\DataService.cs" />
     <Compile Include="Service\IDataService.cs" />
+    <Compile Include="ViewModels\AppViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\ParcelDetailViewModel.cs" />
