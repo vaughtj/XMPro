@@ -134,7 +134,19 @@
                                                     </StackLayout>
                                                     <StackLayout Grid.Row="2" Orientation="Horizontal">
                                                         <Label Text="{Binding DestinationCity}" VerticalTextAlignment="Start" FontSize="12"/>
-                                                        <Label Text="{Binding DestinationST}" VerticalTextAlignment="Start" FontSize="12"/>
+
+                                                        <Label Text="{Binding DestinationST}" VerticalTextAlignment="Start" FontSize="12">
+                                                            <Label.Triggers>
+                                                                <DataTrigger TargetType="Label" Binding="{Binding DestinationST}" Value="TX">
+                                                                    <Setter Property="TextColor" Value="Blue" />
+                                                                    <Setter Property="FontAttributes" Value="Bold" />
+                                                                </DataTrigger>
+                                                            </Label.Triggers>
+                                                        </Label>
+
+
+
+                                                        <!--<Label Text="{Binding DestinationST}" VerticalTextAlignment="Start" FontSize="12"/>-->
                                                         <Label Text="{Binding DestinationZip}" VerticalTextAlignment="Start" FontSize="12"/>
                                                     </StackLayout>
                                                 </Grid>

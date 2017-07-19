@@ -25,6 +25,7 @@ BindableProperty</br>
 Gestures</br>
 Effects</br>
 Renders</br>
+Triggers</br>
 Converters - event to command</br>
 Controls</br>
 List Context Actions - Right/Left Swipe</br>
@@ -37,8 +38,9 @@ Device.Idiom</br>
 # Soon-to-come
 Realm.io</br>
 -encrypted database</br>
-Triggers</br>
 MessagingCenter.Send</br>
 DependanceService.Get<T></br>
+View Cell Templates</br>
+Quick Index iOS List View</br>
 
 
